@@ -1,0 +1,54 @@
+.demo { --field-border: #789995; --bg: #122020; --panel: #1c3030; --line: #476766; --ink: #f1fbf7; --muted: #bfd8d0; --accent: #a8ebd9; --button: #a8ebd9; }
+.demo.beauty { --field-border: #a07083; color-scheme: light; --bg: #f9edf0; --panel: #fff9fa; --line: #d6adb9; --ink: #35202a; --muted: #664656; --accent: #782d51; --button: #872e58; }
+.demo.bot { --field-border: #7589aa; --bg: #141928; --panel: #1f2940; --line: #485e82; --ink: #f2f6ff; --muted: #c1cfe9; --accent: #b9d0ff; --button: #b9d0ff; }
+.demo .brand-icon, .demo .primary { color: #182321; }
+.beauty .brand-icon, .beauty .primary { color: white; }
+.demo .primary:hover { filter: brightness(1.12); background: var(--button); }
+.demo .wrap { max-width: 990px; }
+.demo-bar { border-bottom: 1px solid var(--line); }
+.demo-bar .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem 1rem; padding-block: .85rem; }
+.demo-bar a { display: inline-block; padding-block: .3rem; }
+.demo-hero { padding-block: clamp(2.6rem, 6vw, 5.4rem); }
+.demo-hero h1 { max-width: 17ch; font-size: clamp(2.45rem, 7vw, 5.3rem); }
+.beauty h1, .beauty h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 500; }
+.demo-hero h1 + p { margin-top: 1rem; max-width: 55ch; font-size: 1.12rem; }
+.demo-hero .button { margin-top: 1.25rem; }
+.demo-hero .notice { margin-top: 1rem; }
+.notice { font-size: .92rem; color: var(--muted); }
+.demo-columns { display: grid; grid-template-columns: 1fr 1.05fr; align-items: start; gap: clamp(1.2rem, 4vw, 3rem); margin-bottom: 4rem; }
+.demo h2 { font-size: clamp(1.7rem, 4.5vw, 2.5rem); }
+.demo h3 { font-size: 1.15rem; }
+.offer-list { list-style: none; padding: 0; margin: 1.05rem 0 0; }
+.offer-list li { padding-block: 1rem; border-top: 1px solid var(--line); }
+.offer-list li p { margin-top: .3rem; }
+.form-card, .chat-card { padding: clamp(1rem, 4vw, 2rem); background: var(--panel); border: 1px solid var(--line); border-radius: 15px; min-width: 0; }
+.form-card h2 + p { margin-top: .5rem; }
+.demo-form { display: grid; gap: .9rem; margin-top: 1.15rem; }
+.demo-form label { font-weight: 650; }
+.demo-form label, .demo-form .field { display: grid; gap: .3rem; }
+input, select, textarea { width: 100%; min-height: 45px; border: 1px solid var(--field-border); border-radius: 7px; padding: .65rem .7rem; font: inherit; color: var(--ink); background: var(--bg); }
+::placeholder { color: var(--muted); opacity: 1; }
+textarea { resize: vertical; min-height: 95px; }
+button { cursor: pointer; font-family: inherit; }
+.demo-form .button { justify-self: start; }
+.receipt { overflow-wrap: anywhere; padding: .85rem; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; }
+.receipt strong { display: block; margin-bottom: .2rem; color: var(--ink); }
+.repair-delivery { display: grid; gap: .65rem; justify-items: start; margin-top: .85rem; }
+.repair-delivery details { width: 100%; }
+.repair-delivery summary { cursor: pointer; color: var(--accent); }
+.repair-delivery details > :not(summary) { margin-top: .55rem; }
+.repair-delivery label { display: block; }
+.chat-card { max-width: 650px; margin-bottom: 4rem; }
+.chat-card h2 { margin-bottom: 1rem; }
+.chat-log { display: flex; flex-direction: column; gap: .65rem; list-style: none; padding: 0; margin: 0 0 1rem; }
+.chat-log li { padding: .55rem .8rem; max-width: 88%; width: fit-content; background: #303f60; color: var(--ink); border-radius: 10px; overflow-wrap: anywhere; }
+.chat-log .visitor { align-self: end; background: #405884; }
+.chat-log b { display: block; color: #d0dfff; font-size: .78rem; }
+.chat-options { display: flex; flex-wrap: wrap; gap: .5rem; }
+.bot-form { display: flex; gap: .65rem; flex-wrap: wrap; margin-top: 1rem; }
+.bot-form label { flex: 1 1 245px; }
+.bot-form .button { align-self: end; }
+.chat-reset { background: transparent; border: 0; color: var(--accent); text-decoration: underline; text-underline-offset: 3px; min-height: 44px; padding: .45rem .4rem; margin-top: .65rem; }
+@media (max-width: 660px) {
+  .demo-columns { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <title>Ремсервис — демо ремонта техники</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/forms.js" defer></script>
+</head>
+<body class="demo">
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="demo-bar"><div class="wrap"><a href="../index.html#projects">← В портфолио</a><p class="status">Демо · Вымышленная мастерская</p></div></header>
+  <main id="main" tabindex="-1" class="wrap">
+    <section class="demo-hero"><p class="eyebrow">РЕМСЕРВИС</p><h1>Ремонт бытовой техники</h1><p>Опишите поломку и укажите удобное время для связи. Мастер уточнит детали и согласует диагностику.</p><a class="button primary" href="#request">Оставить заявку ↓</a></section>
+    <div class="demo-columns">
+      <section aria-labelledby="offers"><h2 id="offers">Что ремонтируем</h2><ul class="offer-list"><li><h3>Стиральные машины</h3><p>Не сливает воду, шумит, останавливается при стирке.</p></li><li><h3>Холодильники</h3><p>Плохо охлаждает, намерзает лёд или протекает.</p></li><li><h3>Посудомоечные машины</h3><p>Не запускается, оставляет воду или показывает ошибку.</p></li></ul></section>
+      <section class="form-card" id="request" aria-labelledby="request-title">
+        <h2 id="request-title">Тестовая заявка на ремонт</h2><p class="notice" id="repair-note">Укажите вымышленную поломку и время. Затем отправьте подготовленное сообщение в Telegram. Не указывайте телефон и другие личные данные.</p>
+        <noscript><p>Для проверки формы включите JavaScript.</p></noscript>
+        <form class="demo-form" id="repair-form" aria-describedby="repair-note" hidden>
+          <div class="field"><label for="device">Техника</label><select id="device" name="device" required><option value="">Выберите тип</option><option>Стиральная машина</option><option>Холодильник</option><option>Посудомоечная машина</option><option>Другая техника</option></select></div>
+          <label>Что случилось <textarea name="issue" minlength="5" maxlength="300" required placeholder="Например, не сливает воду"></textarea></label>
+          <div class="field"><label for="time">Удобное время</label><select id="time" name="time" required><option value="">Выберите время</option><option>Утро, 9:00–12:00</option><option>День, 12:00–17:00</option><option>Вечер, 17:00–20:00</option></select></div>
+          <button class="button primary" type="submit">Подготовить заявку</button>
+        </form>
+        <div role="status" aria-atomic="true"><div id="receipt" class="receipt" hidden><strong id="receipt-title"></strong><p id="receipt-details"></p></div></div>
+        <div class="repair-delivery" id="repair-delivery" hidden>
+          <a class="button primary" id="repair-telegram" href="https://t.me/DemoBot2007_bot">Открыть бота в Telegram ↗</a>
+          <p class="notice">В чате нажмите «Отправить». Бот подтвердит доставку, когда передаст заявку разработчику.</p>
+          <details>
+            <summary>Сообщение не появилось в чате?</summary>
+            <p class="notice">Нажмите «Старт» в Telegram. Затем скопируйте текст целиком и отправьте боту.</p>
+            <label for="repair-message">Текст для Telegram</label>
+            <textarea id="repair-message" rows="4" readonly></textarea>
+            <button class="button secondary" id="copy-repair" type="button">Скопировать текст</button>
+            <p class="notice" id="copy-status" role="status"></p>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

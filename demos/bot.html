@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <title>Помощник — демо Telegram-бота</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/bot.js" defer></script>
+</head>
+<body class="demo bot">
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="demo-bar"><div class="wrap"><a href="../index.html#projects">← В портфолио</a><p class="status">Демо · Симулятор</p></div></header>
+  <main id="main" tabindex="-1" class="wrap">
+    <section class="demo-hero"><p class="eyebrow">ЧАТ-ПОМОЩНИК</p><h1>Telegram-бот для заявок</h1><p>Попробуйте меню, ответы на частые вопросы и приём заявки.</p><p class="notice" id="bot-note">Диалог работает в браузере. Для запуска бота в Telegram нужен отдельный сервер или облачная функция с вебхуком. Используйте тестовые данные.</p></section>
+    <section class="chat-card" aria-labelledby="chat-title">
+      <h2 id="chat-title">Диалог с помощником</h2>
+      <noscript><p>Для запуска диалога включите JavaScript.</p></noscript>
+      <div id="chat" aria-describedby="bot-note" hidden>
+        <ol class="chat-log" id="messages" aria-label="Сообщения" role="log"></ol>
+        <div class="chat-options" id="options">
+          <button class="button secondary" type="button" data-choice="services">Услуги</button>
+          <button class="button secondary" type="button" data-choice="price">Стоимость</button>
+          <button class="button primary" type="button" data-choice="request">Оставить заявку</button>
+        </div>
+        <form class="bot-form" id="bot-form" hidden>
+          <label>Кратко опишите задачу <input name="message" required minlength="5" maxlength="160" placeholder="Например, лендинг для мастерской"></label>
+          <button class="button primary" type="submit">Проверить заявку</button>
+        </form>
+        <button class="chat-reset" type="button" id="reset">Начать заново</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

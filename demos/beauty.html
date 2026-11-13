@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <title>Форма — демо салона красоты</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <script src="../assets/forms.js" defer></script>
+</head>
+<body class="demo beauty">
+  <a class="skip" href="#main">Перейти к содержимому</a>
+  <header class="demo-bar"><div class="wrap"><a href="../index.html#projects">← В портфолио</a><p class="status">Демо · Вымышленный салон</p></div></header>
+  <main id="main" tabindex="-1" class="wrap">
+    <section class="demo-hero"><p class="eyebrow">СТУДИЯ КРАСОТЫ</p><h1>Форма</h1><p>Стрижки, укладки и уход за руками. Выберите услугу и удобное время визита.</p><a class="button primary" href="#booking">Выбрать услугу ↓</a></section>
+    <div class="demo-columns">
+      <section aria-labelledby="price"><h2 id="price">Услуги и цены</h2><ul class="offer-list"><li><h3>Стрижка · 1 800 ₽</h3><p>Мытьё, стрижка и укладка · 60 минут</p></li><li><h3>Укладка · 1 400 ₽</h3><p>Укладка на брашинг или лёгкие волны · 45 минут</p></li><li><h3>Маникюр · 1 600 ₽</h3><p>Обработка ногтей и уход · 60 минут</p></li></ul></section>
+      <section class="form-card" id="booking" aria-labelledby="booking-title">
+        <h2 id="booking-title">Запись на визит</h2><p class="notice" id="beauty-note">Даты и время примерные. Выбор не бронирует визит.</p>
+        <noscript><p>Для проверки формы включите JavaScript.</p></noscript>
+        <form class="demo-form" id="beauty-form" aria-describedby="beauty-note" hidden>
+          <div class="field"><label for="service">Услуга</label><select id="service" name="service" required><option value="">Выберите услугу</option><option>Стрижка · 1 800 ₽</option><option>Укладка · 1 400 ₽</option><option>Маникюр · 1 600 ₽</option></select></div>
+          <div class="field"><label for="date">Дата</label><select id="date" name="date" required><option value="">Выберите дату</option></select></div>
+          <div class="field"><label for="time">Время</label><select id="time" name="time" required><option value="">Выберите время</option><option>10:00</option><option>13:30</option><option>16:00</option></select></div>
+          <button class="button primary" type="submit">Проверить запись</button>
+        </form>
+        <div role="status" aria-atomic="true"><div id="receipt" class="receipt" hidden><strong id="receipt-title"></strong><p id="receipt-details"></p></div></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
